@@ -80,20 +80,22 @@ output_path = "metrics/latestdetections.md"
 with open(output_path, "w") as outfile:
     outfile.write("# Detection Report\n")
     # Current Month
+    outfile.write("## Current Month\n")
+    outfile.write("### New Alerts\n")
+    outfile.write("| Alert | Date | Author | Risk Score | Serverity |\n")
     for line in current.values():
         date = line["date"]
         name = line["name"]
         author = str(line["author"]).replace(",", ";")
         risk_score = str(line["risk_score"])
         severity = line["severity"]
-
-        outfile.write("## Current Month\n")
-        outfile.write("### New Alerts\n")
-        outfile.write("| Alert | Date | Author | Risk Score | Serverity |\n")
         outfile.write("| --- | --- | --- | --- | --- |\n")
         outfile.write(f"| {name} | {date} | {author} | {risk_score} | {severity} |\n")
 
     # Last Month
+    outfile.write("## Last Month\n")
+    outfile.write("### Alerts\n")
+    outfile.write("| Alert | Date | Author | Risk Score | Serverity |\n")
     for line in one_month.values():
         date = line["date"]
         name = line["name"]
@@ -101,13 +103,13 @@ with open(output_path, "w") as outfile:
         risk_score = str(line["risk_score"])
         severity = line["severity"]
 
-        outfile.write("## Last Month\n")
-        outfile.write("### Alerts\n")
-        outfile.write("| Alert | Date | Author | Risk Score | Serverity |\n")
         outfile.write("| --- | --- | --- | --- | --- |\n")
         outfile.write(f"| {name} | {date} | {author} | {risk_score} | {severity} |\n")
 
     # Two Months Ago
+    outfile.write("## Two Months ago\n")
+    outfile.write("### Alerts\n")
+    outfile.write("| Alert | Date | Author | Risk Score | Serverity |\n")
     for line in two_months.values():
         date = line["date"]
         name = line["name"]
@@ -115,8 +117,5 @@ with open(output_path, "w") as outfile:
         risk_score = str(line["risk_score"])
         severity = line["severity"]
 
-        outfile.write("## Two Months ago\n")
-        outfile.write("### Alerts\n")
-        outfile.write("| Alert | Date | Author | Risk Score | Serverity |\n")
         outfile.write("| --- | --- | --- | --- | --- |\n")
         outfile.write(f"| {name} | {date} | {author} | {risk_score} | {severity} |\n")
