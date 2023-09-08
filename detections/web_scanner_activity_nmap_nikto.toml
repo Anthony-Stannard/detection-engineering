@@ -1,3 +1,11 @@
+[metadata]
+creation_date = "2023/09/04"
+integration = ["endpoint", "windows"]
+maturity = "production"
+min_stack_comments = "New fields added: required_fields, related_integrations, setup"
+min_stack_version = "8.3.0"
+updated_date = "2023/06/22"
+
 [rule]
 author = ["Anthony Stannard"]
 description = """
