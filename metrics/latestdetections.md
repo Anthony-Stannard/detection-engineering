@@ -9,3 +9,6 @@
 | Alert | Date | Author | Risk Score | Serverity |
 | --- | --- | --- | --- | --- |
 | Encrypting Files with WinRar or 7z | 2023/08/04 | ['Elastic'] | 47 | medium |
+## Two Months ago
+### Alerts
+| Alert | Date | Author | Risk Score | Serverity |
