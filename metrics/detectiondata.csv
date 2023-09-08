@@ -1,0 +1,3 @@
+name,date,author,risk_score,severity,tactic,technique,subtechnique
+Web Scanner Activity - Nmap and Nikto,2023/09/04,['Anthony Stannard'],25,low,Discovery,T1046 - Network Service Discovery,none - none
+Encrypting Files with WinRar or 7z,2023/08/04,['Elastic'],47,medium,Collection,T1560 - Archive Collected Data,T1560 - Archive Collected Data
